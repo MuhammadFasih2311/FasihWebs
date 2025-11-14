@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fasih | Portfolio</title>
+  <link rel="icon" href="images\flag1.jpg" type="image/png" loading="lazy">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  
+  /* Smooth Transition */
+  body, .hero, .about-section, .projects-section, .card, footer {
+    transition: background-color 0.6s ease, color 0.6s ease;
+  }
+
+  /* Dark Mode Base */
+  .dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+  }
+
+  /* Navbar in Dark Mode */
+  .dark-mode .navbar {
+    background: linear-gradient(to right, #333333, #1c1c1c) !important;
+  }
+
+  .dark-mode .navbar .nav-link,
+  .dark-mode .navbar .navbar-brand{
+    color: #f0f0f0 !important;
+  }
+
+  .dark-mode .navbar .nav-link:hover,
+  .dark-mode .navbar .navbar-brand:hover {
+    color: #20c997 !important;
+  }
+
+  /* Main Sections Background in Dark Mode */
+ 
+  .dark-mode .about-section,
+  .dark-mode .projects-section,
+  .dark-mode section {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+  }
+  .dark-mode .hero {
+    background: linear-gradient(to right,rgb(14, 14, 14),rgb(17, 17, 17)) !important;
+  }
+ .dark-mode .dr{
+  color: #f0f0f0 !important;
+  }
+
+  /* Buttons in Dark Mode */
+  .dark-mode .custom-btn {
+    background-color: #20c997 !important;
+    transition: background 0.3s;
+  }
+
+  .dark-mode .btns:hover,
+  .dark-mode .custom-btn:hover {
+    background-color: #6a0dad !important;
+  }
+  .dark-mode .section-title{
+    color: #20c997 !important;
+    transition: background 0.3s;
+  }
+   .dark-mode .bor {
+    background-color: #20c997 !important;
+    border: 2px solid #ccc;
+    border-radius:15px;
+    padding:5px 15px;
+  }
+  .dark-mode .bor:hover {
+    background-color: #6a0dad !important;
+  }
+
+.dark-mode body{
+  background-color:rgb(44, 44, 44) !important;
+}
+footer{
+  background: linear-gradient(to right, #e6e6fa, #d4edda);
+}
+.dark-mode footer{
+   background: linear-gradient(to right, #333333, #1c1c1c) !important;
+}
+.dark-mode #testimonials {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
+}
+
+.dark-mode #testimonials .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+.dark-mode #scrollTopBtn {
+  background: linear-gradient(to right, #6a0dad, #20c997);
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background: linear-gradient(to right, #e6e6fa, #d4edda);">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.php" data-aos="fade-right">👨‍💻 Fasih’s Portfolio</a>
+
+    <!-- Dark mode button (mobile) -->
+    <button onclick="toggleDarkMode()" id="darkModeBtnMobile" class="btn btn-sm btn-outline-secondary d-lg-none me-2" data-aos="zoom-in">
+      <i id="themeIconMobile" class="bi"></i>
+    </button>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation" data-aos="fade-down">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" data-aos="fade-down"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="400"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="500"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item" data-aos="fade-down" data-aos-delay="600"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Dark mode button (desktop) -->
+      <button onclick="toggleDarkMode()" id="dark-toggle" class="btn btn-sm btn-outline-secondary d-none d-lg-inline ms-3" data-aos="fade-down" data-aos-delay="700">
+        <i id="themeIconDesktop" class="bi"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<button id="scrollTopBtn" title="Go to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Hero Section -->
+<section id="hero" class="hero d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+  <div class="hero-content">
+    <h1 class="dr">Hello, I'm <span class="highlight">Fasih</span></h1>
+    <h2><span id="typed-text"></span><span class="cursor">|</span></h2>
+    <p class="dr">I build clean, modern & responsive websites.</p>
+    <a href="#projects" class="custom-btn">See My Work</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+  <div class="container" data-aos="fade-up">
+    <div class="tilt-box mx-auto">
+      <img src="images/my img.png" alt="Fasih's Photo" class="about-img" loading="lazy"  data-aos="flip-right"/>
+    </div>
+    <h2 class="mt-4" data-aos="fade-up">Hi, I'm Fasih</h2>
+    <p class="mb-3" data-aos="fade-up" data-aos-delay="300">A passionate and creative web developer focused on building fast, responsive, and visually stunning websites.</p>
+    
+    <h5 class="mt-4" data-aos="fade-up" data-aos-delay="400">🛠️ Tech Stack</h5>
+    <p data-aos="fade-up" data-aos-delay="500">
+      <strong>💻 Frontend:</strong><br>
+      HTML5, CSS3, JavaScript (ES6), Bootstrap 5<br><br>
+
+      <strong>🗄️ Backend:</strong><br>
+      PHP (Core), Laravel (MVC Framework), MySQL (CRUD, Authentication, Admin Panels)<br><br>
+
+      <strong>🧰 Tools & Libraries:</strong><br>
+      AOS (Animate On Scroll), Swiper.js (Sliders), VanillaTilt (3D Hover), Git & GitHub<br><br>
+
+      <strong>🚀 Development Style:</strong><br>
+      Clean code, responsive design, SEO-friendly structure, and modern UI/UX
+    </p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section py-5">
+  <div class="container" data-aos="fade-up">
+    <h1 class="section-title text-center mb-5">🚀 My Projects</h1>
+    <div class="row g-4">
+
+      <!-- Elegant Salon -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/slider2.jpg" class="card-img-top" alt="Elegant Salon"
+           style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">Elegant Salon</h5>
+            <p class="card-text flex-grow-1 small">
+              A salon booking and management system with admin dashboard, built using <strong>PHP, MySQL,</strong> and <strong>Bootstrap 5</strong>.
+            </p>
+            <p class="text-muted">Type: <strong>Dynamic PHP Project</strong></p>
+            <a href="https://elegantsalon.wuaze.com/" class="btn btn-sm btn-primary bor mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creamy Delight -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/shop1.jpg" class="card-img-top" alt="Creamy Delight"
+           style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">Creamy Delight</h5>
+            <p class="card-text flex-grow-1 small">
+              An ice cream eCommerce site with cart, checkout, login/signup, and admin panel built using <strong>PHP, AJAX,</strong> and <strong>MySQL</strong>.
+            </p>
+            <p class="text-muted">Type: <strong>Dynamic PHP Project</strong></p>
+            <a href="https://creamydelight.wuaze.com/" class="btn btn-sm btn-primary bor mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ExpenseVoyage -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="300">
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/travel.jpg" class="card-img-top" alt="ExpenseVoyage"
+          style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">ExpenseVoyage</h5>
+            <p class="card-text flex-grow-1 small">
+              A travel expense tracking website made with <strong>PHP</strong> and <strong>MySQL</strong>, featuring responsive design and animated sliders.
+            </p>
+            <p class="text-muted">Type: <strong>Dynamic PHP Project</strong></p>
+            <a href="https://expensevoyage.kesug.com/" class="btn btn-sm btn-primary bor mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FitnessPro -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/fitnesspro.jpg" class="card-img-top" alt="FitnessPro"
+          style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">FitnessPro</h5>
+            <p class="card-text flex-grow-1 small">
+              A sleek one-page landing website for a fitness brand using <strong>HTML, CSS,</strong> and <strong>Bootstrap 5</strong>.
+            </p>
+            <p class="text-muted">Type: <strong>Static Website</strong></p>
+            <a href="https://fitnesspro.gt.tc/" class="btn btn-sm btn-primary bor mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Petcare Website -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="200"> 
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/pet.jpg" class="card-img-top" alt="Petcare Website"
+          style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">Petcare Website</h5>
+            <p class="card-text flex-grow-1 small">
+              A pet grooming and appointment booking platform built with <strong>PHP</strong> and <strong>MySQL</strong>, featuring responsive UI and admin control.
+            </p>
+            <p class="text-muted">Type: <strong>Dynamic PHP Project</strong></p>
+            <a href="https://furshield-2412.kesug.com/" class="btn btn-sm btn-primary bor mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TastyBite Restaurant -->
+      <div class="col-md-12 col-lg-4 col-sm-12" data-aos="fade-up" data-aos-delay="300"> 
+        <div class="card tilt-box h-100 shadow-sm">
+          <img src="images/tastybite.jpg" class="card-img-top" alt="TastyBite Restaurant"
+          style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">TastyBite Restaurant</h5>
+            <p class="card-text flex-grow-1 small">
+              A restaurant website built using <strong>Laravel</strong>, featuring menu management, online ordering, and admin dashboard (in progress).
+            </p>
+            <p class="text-muted">Type: <strong>Laravel Dynamic Project (In Progress)</strong></p>
+            <p class="fw-bold text-warning mt-auto">Under Development 🔧</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="py-5 text-center" id="testimonials">
+  <div class="container" data-aos="fade-up">
+    <h1 class="section-title mb-4">⭐ What Clients Say</h1>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-12 col-sm-12 col-lg-4" data-aos="flip-left">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Fasih did an amazing job on our salon booking website. It’s fast, modern, and very easy to manage. Highly recommend!"</p>
+            <h6 class="card-subtitle mt-3">– Sarah A., Elegant Salon</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-lg-4" data-aos="flip-left"  data-aos-delay="300">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Super satisfied with the eCommerce site he built. The cart, login, and admin features work perfectly!"</p>
+            <h6 class="card-subtitle mt-3">– Daniel K., Creamy Delight</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-lg-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Great experience working with Fasih. He delivered everything on time with clean code and a smooth layout."</p>
+            <h6 class="card-subtitle mt-3">– Emma R., Eco Disposable Store</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light text-center">
+  <div class="container" data-aos="zoom-in">
+    <h1 class="section-title mb-3">📬 Contact Me</h1>
+    <p>If you’d like to work together or just say hello, drop me a message!</p>
+    <a href="contact.php" class="custom-btn btn-success mt-3">Send Email</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4" style="border-top: 1px solid #ddd;">
+  <div class="container">
+    <p class="mb-0 text-muted dr">&copy; 2025 Fasih | All rights reserved.</p>
+      <a href="https://github.com/MuhammadFasih2311" class="text-purple me-2" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="www.linkedin.com/in/muhammad-fasihdev" class="text-purple me-2" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61579211746082" class="text-purple me-2" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/fasih2412" class="text-purple" target="_blank"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, delay: 200 });
+  VanillaTilt.init(document.querySelectorAll(".tilt-box"), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.4,
+  });
+
+  function setDarkIcons(isDark) {
+  document.getElementById("themeIconMobile").className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+  document.getElementById("themeIconDesktop").className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+}
+
+function toggleDarkMode() {
+  document.documentElement.classList.toggle("dark-mode");
+  const isDark = document.documentElement.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", isDark);
+  setDarkIcons(isDark);
+}
+
+const darkSaved = localStorage.getItem("darkMode") === "true";
+if (darkSaved) {
+  document.documentElement.classList.add("dark-mode");
+}
+setDarkIcons(darkSaved);
+
+// Hamburger open/close toggle
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    this.classList.toggle('opened');
+});
+
+// Dark mode toggle
+document.getElementById('darkModeToggleMobile').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
