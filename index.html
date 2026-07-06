@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fasih | Full-Stack Developer</title>
+  <link rel="icon" href="images/flag1.jpg" type="image/png" loading="lazy">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor"></div>
+<div class="custom-cursor-dot"></div>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/923372412901" class="whatsapp-float" target="_blank" data-aos="zoom-in">
+  <i class="bi bi-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat with me!</span>
+</a>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#" data-aos="fade-right">
+      <span class="brand-gradient">&lt;/&gt;</span> Fasih.dev
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <button id="darkModeToggle" title="Dark Mode">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+  <button id="scrollTopBtn" title="Top">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bg-shape"></div>
+  <div class="hero-bg-shape-2"></div>
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-badge">
+          <span class="badge-glow">👋 Available for work</span>
+        </div>
+        <h1 class="hero-title">
+          I'm <span class="gradient-text">Fasih</span>
+          <span class="typed-wrapper">
+            <span id="typed-text"></span>
+            <span class="typed-cursor">|</span>
+          </span>
+        </h1>
+        <p class="hero-desc">
+          Building <strong>full-stack web applications</strong> with PHP, Laravel, ASP.NET, Angular, and modern frontend technologies.
+          Expert in multi-panel systems, booking engines, and custom dashboards.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary-glow">View Projects <i class="bi bi-arrow-right"></i></a>
+          <a href="assets/Fasih-CV.pdf" download class="btn-outline-light">Download CV <i class="bi bi-download"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">12+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <img src="images\my3.jpg" alt="Fasih" class="hero-image">
+          <div class="floating-card card-1">
+            <i class="bi bi-code-slash"></i>
+            <span>Full-Stack</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="bi bi-database"></i>
+            <span>Backend</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="bi bi-phone"></i>
+            <span>Responsive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">About Me</span>
+      <h2 class="section-title">Who Am I?</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="about-image-wrapper">
+          <img src="images/m2.jpg" alt="Fasih" class="about-image">
+          <div class="about-image-border"></div>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="about-content">
+          <h3>I'm a <span class="gradient-text">Full-Stack Web Developer</span> from Pakistan</h3>
+          <p>I specialize in building complete web solutions including admin panels, multi-user systems, booking engines, e-commerce platforms, and custom dashboards. Currently in my 4th semester, I've mastered the art of delivering professional-grade applications using modern frameworks.</p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="bi bi-person"></i>
+              <div>
+                <strong>Name:</strong>
+                <span>Muhammad Fasih</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <span>fasih2412@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <strong>Location:</strong>
+                <span>Pakistan</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-briefcase"></i>
+              <div>
+                <strong>Availability:</strong>
+                <span>Open for Freelance</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-buttons">
+            <a href="#contact" class="btn-primary">Hire Me <i class="bi bi-send"></i></a>
+            <a href="#projects" class="btn-outline">View Work <i class="bi bi-eye"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section (UPDATED with ASP.NET, Angular, C#, TypeScript) -->
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">Technical Skills</span>
+      <h2 class="section-title">My Tech Stack</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h4>Frontend</h4>
+          <p>HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Angular</p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper">
+            <i class="bi bi-server"></i>
+          </div>
+          <h4>Backend</h4>
+          <p>PHP, Laravel, ASP.NET MVC, C#, Node.js Basics</p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper">
+            <i class="bi bi-database"></i>
+          </div>
+          <h4>Database</h4>
+          <p>MySQL, SQL Server, JSON, Firebase</p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper">
+            <i class="bi bi-braces"></i>
+          </div>
+          <h4>Frameworks & Tools</h4>
+          <p>Laravel, ASP.NET MVC, Angular, jQuery, Git</p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 78%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Journey Timeline Section -->
+<section id="journey" class="journey">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">My Journey</span>
+      <h2 class="section-title">How It All Started</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline-wrapper">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2023</div>
+          <h4>🎯 Started Web Development</h4>
+          <p>Began learning HTML, CSS, and basic website design. Built first static websites.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024</div>
+          <h4>⚙️ PHP & MySQL Mastery</h4>
+          <p>Created dynamic websites, dashboards, CRUD systems, and admin panels.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024-2025</div>
+          <h4>🚀 Laravel & MVC Pattern</h4>
+          <p>Learned Laravel, MVC architecture, Blade templating, and built TastyBite Restaurant.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2025</div>
+          <h4>💼 ASP.NET & Angular</h4>
+          <p>Started learning ASP.NET MVC, C#, TypeScript, and Angular for enterprise-level apps.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2025</div>
+          <h4>🌟 Freelancing Ready</h4>
+          <p>Portfolio complete, ready to take client projects globally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Complex systems with multi-panel access, booking engines, and full admin control</p>
+    </div>
+    <div class="row g-4">
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/slider2.jpg" alt="Elegant Salon">
+            <div class="project-overlay">
+              <div class="project-badge">Full-Stack</div>
+              <div class="project-links">
+                <a href="https://elegantsalon.free.nf/" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Elegant Salon</h4>
+            <p>Salon booking system with admin dashboard, appointment management, and client records</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/shop1.jpg" alt="Creamy Delight">
+            <div class="project-overlay">
+              <div class="project-badge">E-Commerce</div>
+              <div class="project-links">
+                <a href="https://creamydelight.wuaze.com/" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Creamy Delight</h4>
+            <p>Ice cream eCommerce with cart, checkout, login/signup, and complete admin panel</p>
+            <div class="project-tech">
+              <span>PHP</span><span>AJAX</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/caregroup.jpg" alt="CareGroup">
+            <div class="project-overlay">
+              <div class="project-badge">Medical Portal</div>
+              <div class="project-links">
+                <a href="https://caregroup.gt.tc" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>CareGroup Medical</h4>
+            <p>Hospital & doctor information system with secure admin panel and disease database</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/travel.jpg" alt="ExpenseVoyage">
+            <div class="project-overlay">
+              <div class="project-badge">Travel Tool</div>
+              <div class="project-links">
+                <a href="https://expensevoyage.kesug.com/" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>ExpenseVoyage</h4>
+            <p>Travel expense tracking system with responsive design and interactive features</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/pet.jpg" alt="Petcare">
+            <div class="project-overlay">
+              <div class="project-badge">Booking System</div>
+              <div class="project-links">
+                <a href="https://furshield.free.nf/" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Petcare Pro</h4>
+            <p>Pet grooming appointment booking platform with admin control panel</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/courierexpress.jpg" alt="CourierExpress">
+            <div class="project-overlay">
+              <div class="project-badge">Management</div>
+              <div class="project-links">
+                <a href="https://courierexpress.free.nf" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>CourierExpress</h4>
+            <p>Courier management system for shipment tracking and admin operations</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faqs" class="faqs">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">FAQs</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="faq-video-wrapper">
+          <div class="faq-video">
+            <iframe src="https://www.youtube.com/embed/BpYkoCP3114" title="Introduction Video" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                What services do you offer?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">I build complete websites including frontend, backend, admin panels, authentication & responsive UI/UX using PHP, Laravel, ASP.NET, and Angular.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Do you work with ASP.NET & Angular?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes! I build enterprise-level applications using ASP.NET MVC, C#, TypeScript, and Angular framework.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                How long does it take to create a website?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Simple portfolio: 1-4 days | Full dynamic website: 7-15 days | Complex web apps: 15-30 days depending on features.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Do you provide support after delivery?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes – free support for bug fixes (30 days) + paid support for new features or redesign.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Can I see your previous work?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely! Check out my projects section above or visit my GitHub profile for more examples.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">Client Feedback</span>
+      <h2 class="section-title">What Clients Say</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <i class="bi bi-quote quote-icon"></i>
+          <p class="testimonial-text">"The salon website is fast, modern, and very easy to manage. The admin panel works smoothly."</p>
+          <div class="testimonial-author">
+            <strong>Elegant Salon</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <i class="bi bi-quote quote-icon"></i>
+          <p class="testimonial-text">"A well-built eCommerce website with smooth checkout and powerful admin dashboard."</p>
+          <div class="testimonial-author">
+            <strong>Creamy Delight</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card">
+          <i class="bi bi-quote quote-icon"></i>
+          <p class="testimonial-text">"Professional work delivered on time. The medical website is informative and secure."</p>
+          <div class="testimonial-author">
+            <strong>CareGroup Medical</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-subtitle">Get In Touch</span>
+      <h2 class="section-title">Let's Work Together</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Have a project in mind? Let's discuss how I can help you</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i class="bi bi-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+92 337 2412901</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>fasih2412@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="bi bi-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <p>/MuhammadFasih2311</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="bi bi-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>/muhammad-fasihdev</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <form id="contactForm" action="https://formspree.io/f/mvgbdnqv" method="POST" class="contact-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-12">
+              <input type="text" name="subject" class="form-control" placeholder="Subject">
+            </div>
+            <div class="col-12">
+              <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-submit">Send Message <i class="bi bi-send"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>&copy; 2025 Fasih. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com/MuhammadFasih2311" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-fasihdev" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61579211746082" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/fasih2412" target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
