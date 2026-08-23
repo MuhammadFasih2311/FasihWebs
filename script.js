@@ -1,23 +1,8 @@
+const textArray = ["a Web Developer.", "a Designer."];
+let i = 0, j = 0, currentText = "", isDeleting = false;
 
-// AOS INITIALIZATION
-AOS.init({
-  duration: 800,
-  offset: 100
-});
-
-// TYPED TEXT EFFECT
-const textArray = [
-  "Full-Stack Developer",
-  "Building Scalable Web Apps",
-  "Multi-Stack Developer",
-  "Problem Solver",
-  "Passionate Coder"
-];
-
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typedTextElement = document.getElementById("typed-text");
+function type() {
+  const typed = document.getElementById("typed-text");
 
 function typeEffect() {
   if (!typedTextElement) return;
@@ -356,17 +341,14 @@ if (footerYear) {
       enableBodyScroll();
     }
   }
-  
-  // Listen for Bootstrap collapse events
+
   navbarCollapse.addEventListener('show.bs.collapse', disableBodyScroll);
   navbarCollapse.addEventListener('hidden.bs.collapse', enableBodyScroll);
   
-  // Handle toggler click
   navbarToggler.addEventListener('click', function() {
     setTimeout(handleMenuState, 50);
   });
-  
-  // Close menu when clicking on nav links (optional)
+
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -378,12 +360,11 @@ if (footerYear) {
     });
   });
   
-  // Also handle window resize - if menu is open and screen becomes desktop, re-enable scroll
   window.addEventListener('resize', function() {
     if (window.innerWidth > 991) {
       enableBodyScroll();
     } else {
-      // If on mobile and menu is open, keep scroll disabled
+
       if (navbarCollapse.classList.contains('show')) {
         disableBodyScroll();
       } else {
